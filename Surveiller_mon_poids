@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int taille=0,circonferance_poignet=0,poids=0;
+    float poids_ideal=0;
+
+    printf("Afin de connaitre votre poids ideal on va procede a un petit questionnaire\n");
+    printf("saisissez votre Taille en cm :\n");
+    scanf("%d",&taille);
+    printf("saisissez votre circonferance poignet en cm :\n");
+    scanf("%d",&circonferance_poignet);
+    printf("saississez votre poids en Kilogramme :\n");
+    scanf("%d",&poids);
+
+    poids_ideal = taille -100 +(4*circonferance_poignet);
+    printf("votre poids ideal : %f Kg \n",poids_ideal);
+    if (poids <= poids_ideal+1 && poids >= poids_ideal-1)
+    printf("Vous etes dans le vert VOUS AVEZ LE POIDS IDEAL!\n)");
+    else if (poids <=poids_ideal +3 && poids >= poids_ideal-3)
+    printf("vous etes dans le orange FAITE ATTENTION ! \n");
+    else
+        printf("vous etes dans le rouge SURVEILLER VOTRE POIDS !\n");
+}
