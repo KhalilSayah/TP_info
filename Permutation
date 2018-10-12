@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float x=0,y=0;
+
+    printf("saisissez la valeur de x a retenir : \n x=");
+    scanf("%f",&x);
+    printf("saisissez la valeur de y a retenir : \n y=");
+    scanf("%f",&y);
+    printf("x = %f \ny = %f",y,x);
+    return 0;
+}
