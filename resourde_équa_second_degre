@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int a=0,b=0,c=0,delta=0,solutiondouble=0;
+   float solution1=0,solution2=0,solutionpremierdeg=0;
+
+   printf("resolution d'une equation de la forme suivante : aX²+bX+c=0\na = ");
+     scanf("%d",&a);//récuperer la valeur de a
+   printf("b=");
+     scanf("%d",&b);//récuperer la valeur de b
+   printf("c=");
+     scanf("%d",&c);//récuperer la valeur de c
+//solutionpremierdeg = -c /b;
+if (a == 0 && b == 0 && c == 0)
+    printf("Toute les valeurs de x sont des solutions\n");
+else if(a == 0 && b == 0)
+        printf("il existe aucune solution pour l'equation suivante\n");
+    else if (a == 0)
+    {       solutionpremierdeg =(double) -c /b;
+            printf("x: %lf  (-%d/%d)\n",solutionpremierdeg,c,b);}
+            else {
+                delta = b*b-4*a*c;
+                printf("delta = %d (%d * %d -4 * %d * %d)\n",delta,b,b,a,c);
+                if (delta > 0)
+                     {
+                    solution1 = (-b-sqrt(delta))/(2*a);
+                    solution2 = (-b+sqrt(delta))/(2*a);
+
+                          printf("solution:x'= %lf [(-%d-%lf)/ 2 * %d]\n",solution1,b,sqrt(delta),a);
+                          printf("         x''= %lf [(-%d+%lf)/ 2 * %d]\n",solution2,b,sqrt(delta),a);
+                            }
+                          else if (delta == 0)
+                          {solutiondouble = -b / (2*a);
+                            printf("solution double : %d=-%d/(2*%d)\n",solutiondouble,b,a);}
+                          else if (delta < 0)
+                            printf("il existe aucune solution pour l'equation suivante\n");
+
+
+
+
+
+            }
+
+
+return 0;
+}
