@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+//kilogramme ---> LIVRE
+int main()
+{
+    float resulta=0,poids=0;
+
+
+    printf("saisissez la valeur du poids a convertir en kilogramme : \n");
+    scanf("%f",&poids);
+    resulta = poids / 0.4536;
+    printf("poids en livre :%f  (%f /0.4536) \n",resulta,poids);
+
+return 0;
+}
+//MILE ---> PIEDS
+int main()
+{
+    float resulta=0,distance=0;
+
+
+    printf("saisissez la valeur de la distance a convertir en Mile : \n");
+    scanf("%f",&distance);
+    resulta = distance * 5278.9681;
+    printf("distance en pieds :%f  (%f * 5278.9681) \n",resulta,distance);
+
+return 0;
+}
