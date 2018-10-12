@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int Z=0,n=0;
+    float En=0;
+    printf("saisissez le numero atomique de l'atome (Z)\nZ=");
+    scanf("%d",&Z);
+    printf("saisissez le niveau concerne (n)\nn=");
+    scanf("%d",&n);
+    En = (double)(-Z*Z)/(n*n)*13.6;
+    if (Z<0 && n<0 , Z<0 || n<0)
+       printf("Erreur de valeur");
+
+    else
+        printf("l'energie du niveau : %lf eV",En);
+
+}
