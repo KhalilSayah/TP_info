@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int prix_net=0,tva=0;
+    double prixTTC=0;
+
+    printf("Entre la valeur du prix net du produit\n");
+    scanf("%d",&prix_net);
+    printf("Entre le TVA : \n");
+    scanf("%d",&tva);
+
+    prixTTC =prix_net +( prix_net *(double) tva / 100);
+    printf("prix TTC : %lf",prixTTC);
+
+}
